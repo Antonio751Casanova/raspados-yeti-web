@@ -1,0 +1,23 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro'; // <--- 1. Importar Footer
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth"> <head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Raspados Yeti - Sabor para tus eventos" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-yeti-dark text-gray-100 font-sans">
+        <Navbar />
+        <slot />
+        <Footer />
+    </body>
+</html>

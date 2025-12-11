@@ -1,0 +1,46 @@
+<nav class="bg-yeti-dark shadow-lg border-b border-yeti-teal/20 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      
+      <a href="/" class="flex items-center gap-3 text-2xl font-bold text-white hover:text-yeti-teal transition group">
+        <img src="/images/logo-yeti.png" alt="Logo Raspados Yeti" class="h-12 w-auto group-hover:scale-105 transition" />
+        <span>Raspados <span class="text-yeti-teal">Yeti</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#inicio" class="text-gray-300 hover:text-yeti-yellow font-medium transition">Inicio</a>
+        <a href="#servicios" class="text-gray-300 hover:text-yeti-yellow font-medium transition">Servicios</a>
+        <a href="#galeria" class="text-gray-300 hover:text-yeti-yellow font-medium transition">Galería</a>
+        <a href="#contacto" class="px-5 py-2.5 bg-yeti-teal text-yeti-dark font-bold rounded-full hover:bg-yeti-yellow transition transform hover:scale-105 shadow-md shadow-yeti-teal/20">
+          Cotizar
+        </a>
+      </div>
+      
+      <button id="menu-toggle" class="md:hidden text-gray-300 hover:text-yeti-teal focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+    <div class="px-4 pt-2 pb-4 space-y-1 flex flex-col">
+      <a href="#inicio" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-yeti-teal hover:bg-gray-800 rounded-md">Inicio</a>
+      <a href="#servicios" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-yeti-teal hover:bg-gray-800 rounded-md">Servicios</a>
+      <a href="#galeria" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-yeti-teal hover:bg-gray-800 rounded-md">Galería</a>
+      <a href="#contacto" class="block px-3 py-3 text-base font-bold text-yeti-dark bg-yeti-teal rounded-md mt-2 text-center">Cotizar Ahora</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>
